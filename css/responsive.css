@@ -1,0 +1,428 @@
+
+.navbar-toggler {
+    border: 2px solid rgba(255, 255, 255, 0.55);
+    border-radius: 8px;
+    padding: 8px 12px;
+    transition: border-color .3s ease, background-color .3s ease, box-shadow .3s ease;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-toggler:hover {
+    border-color: #00C2CB;
+    background-color: rgba(0, 194, 203, 0.12);
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:focus-visible {
+    outline: 0;
+    border-color: #00C2CB;
+    box-shadow: 0 0 0 0.25rem rgba(0, 194, 203, 0.35);
+}
+
+.navbar-toggler:active,
+.navbar-toggler[aria-expanded="true"] {
+    border-color: #00C2CB;
+    background-color: rgba(0, 194, 203, 0.18);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* ---------- Tablet (769px – 991px) ----------
+   Navbar is collapsed below 992px, so this also covers
+   the mobile menu plus tablet-sized typography. */
+@media (max-width: 991.98px) {
+
+    /* Mobile menu */
+    .navbar-nav .nav-item {
+        margin: 0;
+    }
+
+    .navbar-collapse {
+        padding-top: 10px;
+    }
+
+    .navbar-collapse > .d-flex {
+        margin-top: 12px;
+    }
+
+    /* Larger touch targets for the collapsed menu */
+    .navbar .nav-link,
+    .navbar .dropdown-item,
+    .navbar .dropdown-item-text {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .navbar .dropdown-menu {
+        margin-top: 6px;
+    }
+
+    /* Tablet typography */
+    .hero-title,
+    .about-title {
+        font-size: 44px;
+        line-height: 1.2;
+    }
+
+    .section-title {
+        font-size: 36px;
+    }
+
+    .founder-title {
+        font-size: 40px;
+    }
+
+}
+
+/* ---------- Tablets & Small Laptops (max 991px) ----------
+   Top Bar: convert Bootstrap row/col into a clean stacked
+   layout. Left block (phone + email) on first row, right
+   block (social icons) on second row. Both centered. */
+@media (max-width: 991.98px) {
+
+    .top-bar .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .top-bar .col-lg-6 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .top-bar .col-lg-6:last-child {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2px;
+    }
+
+    .top-bar .col-lg-6:last-child .me-3 {
+        margin-right: 0.75rem !important;
+    }
+
+}
+
+/* ---------- Phones (max 768px) ----------
+   Top Bar: stack phone/email and social icons vertically.
+   Social icons get a consistent flex row with even spacing.
+   All icons stay inside the viewport with no overflow. */
+@media (max-width: 768px) {
+
+    /* Top bar: let phone + email wrap, slightly smaller text */
+    .top-bar .col-lg-6:first-child {
+        flex-wrap: wrap;
+        row-gap: 4px;
+        justify-content: center;
+    }
+
+    .top-bar a {
+        font-size: 12.5px;
+    }
+
+    /* Social icons: consistent size and spacing */
+    .top-bar .col-lg-6:last-child {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2px;
+    }
+
+    .top-bar .col-lg-6:last-child a {
+        font-size: 16px;
+    }
+
+    .top-bar .col-lg-6:last-child a i {
+        margin-right: 0;
+    }
+
+    .top-bar .col-lg-6:last-child .me-3 {
+        margin-right: 0.65rem !important;
+    }
+
+    /* Home hero: same simple treatment as the Contact /
+       Admissions heroes — full-width image, no negative
+       margin, no zoom, no box cropping. */
+    .hero-wrapper {
+        padding: 0 15px;
+    }
+
+    .hero-image-box {
+        height: auto;
+        padding: 0;
+        background: transparent;
+        overflow: visible;
+    }
+
+    .hero-image {
+        margin-left: 0;
+        transform: none;
+        max-width: 100%;
+        border-radius: 20px;
+    }
+
+    /* Hero buttons: wrap instead of overflowing, with a
+       clear gap between them when they stack */
+    .hero-buttons {
+        flex-wrap: wrap;
+        row-gap: 12px;
+    }
+
+    .hero-buttons .btn {
+        padding: 12px 24px;
+    }
+
+    /* Hero button pairs (.about-btn — About / Courses / Contact):
+       flexible spacing with a clear gap between adjacent buttons;
+       they stack cleanly with the same gap when they wrap */
+    .about-btn {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .about-btn .btn {
+        margin-right: 0;
+    }
+
+    /* Section spacing: reduce the desktop 90–100px padding */
+    .why-choose,
+    .courses-section,
+    .founder-section,
+    .achievement-section,
+    .testimonial-section,
+    .faq-section,
+    .cta-section,
+    .about-hero,
+    .our-story,
+    .mission-section,
+    .values-section,
+    .leadership-section,
+    .learning-process,
+    .about-achievements,
+    .about-cta,
+    .application-section {
+        padding: 55px 0;
+    }
+
+    .footer {
+        padding: 55px 0 25px;
+    }
+
+    /* Phone typography */
+    .hero-title,
+    .about-title {
+        font-size: 34px;
+        line-height: 1.2;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+    .founder-title {
+        font-size: 32px;
+    }
+
+    /* Course pages */
+    .course-meta {
+        gap: 10px;
+    }
+
+    .course-meta-item {
+        padding: 8px 14px;
+    }
+
+    .course-meta-item strong {
+        font-size: 14px;
+    }
+
+    .cert-name {
+        min-width: 100%;
+    }
+
+    /* About page achievements */
+    .achievement-box h2 {
+        font-size: 40px;
+    }
+
+    /* ---- Mobile Navbar Polish ---- */
+
+    /* Navbar background and spacing */
+    .navbar-collapse {
+        background-color: #0B1F3A;
+        padding: 12px 16px 16px;
+        margin-top: 4px;
+        border-radius: 0 0 12px 12px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    /* Nav items — larger touch targets and clear spacing */
+    .navbar-nav .nav-item {
+        margin: 0;
+    }
+
+    .navbar-nav .nav-item .nav-link {
+        padding: 10px 12px;
+        font-size: 15px;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.85);
+        border-radius: 8px;
+        transition: background-color .2s ease, color .2s ease;
+        display: block;
+    }
+
+    .navbar-nav .nav-item .nav-link:hover {
+        background-color: rgba(0, 194, 203, 0.1);
+        color: #00C2CB;
+    }
+
+    /* Active page highlight */
+    .navbar-nav .nav-item .nav-link.active,
+    .navbar-nav .nav-item .nav-link[aria-current="page"] {
+        color: #FFD54F;
+        font-weight: 600;
+        background-color: rgba(255, 213, 79, 0.08);
+    }
+
+    /* Dropdown toggle button (courses split toggle) */
+    .navbar-nav .nav-item.dropdown .dropdown-toggle-split {
+        padding: 8px 6px;
+        vertical-align: middle;
+    }
+
+    /* Dropdown menus — clear spacing and active states */
+    .navbar .dropdown-menu {
+        background-color: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 10px;
+        padding: 6px 0;
+        margin-top: 4px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar .dropdown-item {
+        padding: 10px 16px;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.8);
+        border-radius: 6px;
+        margin: 2px 8px;
+        transition: background-color .2s ease, color .2s ease;
+    }
+
+    .navbar .dropdown-item:hover,
+    .navbar .dropdown-item:focus {
+        background-color: rgba(0, 194, 203, 0.15);
+        color: #00C2CB;
+    }
+
+    .navbar .dropdown-item.active,
+    .navbar .dropdown-item[aria-current="page"] {
+        background-color: rgba(255, 213, 79, 0.1);
+        color: #FFD54F;
+        font-weight: 600;
+    }
+
+    .navbar .dropdown-item-text {
+        padding: 8px 16px;
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .navbar .dropdown-divider {
+        border-color: rgba(255, 255, 255, 0.08);
+        margin: 4px 12px;
+    }
+
+    /* Login & Enroll buttons — stack and full width */
+    .navbar-collapse > .d-flex {
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 12px;
+        padding-top: 12px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .navbar-collapse > .d-flex .btn {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 15px;
+        font-weight: 600;
+        border-radius: 8px;
+    }
+
+}
+
+/* ---------- Small Phones (max 480px) ----------
+   Top Bar: ensure phone number and email are readable.
+   Social icons get slightly smaller to fit all 5 icons
+   in one row, or wrap cleanly into two rows. */
+@media (max-width: 480px) {
+
+    .top-bar {
+        padding: 6px 0;
+    }
+
+    .top-bar a {
+        font-size: 11.5px;
+    }
+
+    .top-bar .col-lg-6:last-child a {
+        font-size: 15px;
+    }
+
+    .top-bar .col-lg-6:last-child .me-3 {
+        margin-right: 0.55rem !important;
+    }
+
+    /* Slightly reduce top bar phone/email spacing */
+    .top-bar .col-lg-6:first-child a.me-3 {
+        margin-right: 0.5rem !important;
+    }
+
+}
+
+/* ---------- Very Small Phones (max 390px) ----------
+   Top Bar: at 360–390px, the 5 social icons may need to
+   wrap. Ensure they center nicely in two rows if needed. */
+@media (max-width: 390px) {
+
+    .top-bar a {
+        font-size: 11px;
+    }
+
+    .top-bar .col-lg-6:last-child a {
+        font-size: 14px;
+    }
+
+    /* Tighten social icon gap */
+    .top-bar .col-lg-6:last-child .me-3 {
+        margin-right: 0.45rem !important;
+    }
+
+    /* Phone/email — slightly tighter */
+    .top-bar .col-lg-6:first-child a.me-3 {
+        margin-right: 0.4rem !important;
+    }
+
+}
+
+/* ---------- Very small phones (max 576px) ----------
+   Learning process: stack full-width instead of 2-up */
+@media (max-width: 575.98px) {
+
+    .learning-process .col-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+}
