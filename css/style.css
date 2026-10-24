@@ -2,10 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif; /* <-- Apne Google Font ka naam yahan likhein */
+    font-family: 'Poppins', sans-serif; 
 }
 
-/* Header wrapper — keeps Top Bar + Navbar sticky as one unit */
 header {
     position: sticky;
     top: 0;
